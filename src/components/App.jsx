@@ -4,8 +4,8 @@ import { Navigate, Route, Routes } from "react-router-dom";
 import "./App.css";
 import { Layout } from "./Layout";
 
-const HomePage = lazy(() => import("../pages/Home"));
-const CharactersPage = lazy(() => import("../pages/Characters"));
+const HomePage = lazy(() => import("../pages/HomePage"));
+const CharactersPage = lazy(() => import("../pages/CharactersPage"));
 
 function App() {
   return (
