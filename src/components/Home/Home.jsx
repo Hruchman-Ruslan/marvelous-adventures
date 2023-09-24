@@ -1,7 +1,31 @@
+import { useRef } from "react";
+import { useState } from "react";
+import { fetchHeroes } from "../../api/apiMarvel";
+
 export const Home = () => {
+  const [, setHero] = useState([]);
+  let input = useRef("");
+
+  const handleClick = async (e) => {
+    e.preventDefault();
+    let value = input.current.value;
+    if (value === "") return;
+
+    try {
+      let heroes = await fetchHeroes(value);
+      setHero(heroes);
+    } catch (error) {
+      console.error(error);
+    }
+  };
+
   return (
     <>
       <div>
+        <form>
+          <input type="text" placeholder="Search..." ref={input} />
+          <button onClick={handleClick}>Search</button>
+        </form>
         <p>Web-based platform</p>
         <h1>Marvelous Adventures</h1>
         <p>
