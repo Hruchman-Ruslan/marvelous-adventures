@@ -1,7 +1,9 @@
-export default function Characters() {
+import { Characters } from "../components/Characters/Characters";
+
+export default function CharactersPage() {
   return (
     <>
-      <div>Characters Page</div>
+      <Characters />
     </>
   );
 }
