@@ -1,0 +1,1 @@
+import{j as r}from"./index-3ed4d37a.js";import{L as t}from"./Logo-018d5acb.js";const e=()=>r.jsx(r.Fragment,{children:r.jsx(t,{})});function n(){return r.jsx(r.Fragment,{children:r.jsx(e,{})})}export{n as default};
