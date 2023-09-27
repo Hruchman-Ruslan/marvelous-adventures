@@ -1,0 +1,1 @@
+import{u as e,j as s}from"./index-c71716d2.js";const o="/marvelous-adventures/assets/logo-e9474dce.svg",n=()=>{const t=e();return s.jsx(s.Fragment,{children:s.jsx("button",{type:"button",onClick:()=>t("/"),children:s.jsx("img",{src:o,alt:"logo"})})})};export{n as L};
