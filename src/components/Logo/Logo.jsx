@@ -1,13 +1,9 @@
-import { useNavigate } from "react-router-dom";
 import MySvgImage from "../../assets/logo.svg";
 
 export const Logo = () => {
-  const navigate = useNavigate();
   return (
     <>
-      <button type="button" onClick={() => navigate("/")}>
-        <img src={MySvgImage} alt="logo" />
-      </button>
+      <img src={MySvgImage} alt="logo" />
     </>
   );
 };

@@ -1,18 +1,21 @@
 import { NavLink } from "react-router-dom";
+import { Logo } from "../Logo/Logo";
+import { Search } from "../Search/Search";
+import { useState } from "react";
+import styles from "../Header/Header.module.css";
 
 export const Header = () => {
+  const [hero, setHero] = useState([]);
+  console.log(hero);
+
   return (
-    <header>
+    <header className={styles.header}>
       <nav>
-        <ul>
-          <li>
-            <NavLink to="/">Home</NavLink>
-          </li>
-          <li>
-            <NavLink to="/characters">Characters</NavLink>
-          </li>
-        </ul>
+        <NavLink to="/">
+          <Logo />
+        </NavLink>
       </nav>
+      <Search setHero={setHero} />
     </header>
   );
 };

@@ -2,6 +2,7 @@ import PropTypes from "prop-types";
 import { FaSearch } from "react-icons/fa";
 import { fetchHeroes } from "../../api/apiMarvel";
 import { useState } from "react";
+import styles from "../Search/Search.module.css";
 
 export const Search = ({ setHero }) => {
   const [searchText, setSearchText] = useState("");
@@ -10,7 +11,7 @@ export const Search = ({ setHero }) => {
     e.preventDefault();
 
     try {
-      const heroes = await fetchHeroes();
+      const heroes = await fetchHeroes(searchText);
       setHero(heroes);
       setSearchText("");
     } catch (error) {
@@ -20,7 +21,7 @@ export const Search = ({ setHero }) => {
 
   return (
     <>
-      <form>
+      <form className={styles.form}>
         <input
           type="text"
           placeholder="Search..."
