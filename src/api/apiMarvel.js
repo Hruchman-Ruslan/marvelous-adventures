@@ -21,5 +21,5 @@ export const fetchHeroes = async (value) => {
     `/v1/public/characters?ts=${ts}&apikey=${apiKey}&hash=${hash}&nameStartsWith=${value}`
   );
 
-  return data;
+  return data.data.results;
 };
