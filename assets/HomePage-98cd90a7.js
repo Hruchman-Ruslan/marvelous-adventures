@@ -1,1 +1,0 @@
-import{j as e}from"./index-b9a7a32c.js";const r=()=>e.jsx(e.Fragment,{children:e.jsx("div",{children:e.jsx("div",{children:"Hello"})})});function t(){return e.jsx(e.Fragment,{children:e.jsx(r,{})})}export{t as default};
